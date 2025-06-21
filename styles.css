@@ -1,24 +1,38 @@
 body {
     color: white;
-    background: black;
+    /* Fundo com degradê suave e imagem de ballet */
+    background: 
+        linear-gradient(to bottom, #E0F2F7, #F0E6F7, #FFF); /* Azul claro, lilás suave, branco */
+    background-image: url('URL_DA_IMAGEM_DE_BALLET_AQUI'); /* Substitua pela URL da sua imagem */
+    background-size: cover; /* Garante que a imagem cubra todo o fundo */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-attachment: fixed; /* Fixa a imagem de fundo ao rolar */
+    
+    /* Adiciona uma sobreposição translúcida para suavizar a imagem e manter a legibilidade */
+    background-blend-mode: overlay; 
+    
     margin: 0px;
     font-family: "Chakra Petch", sans-serif;
     margin-bottom: 100px;
 }
 
+/* Mantém o restante do CSS como estava ou com pequenas melhorias */
 header {
     border-bottom: solid 2px rgb(42, 122, 228);
     padding: 20px;
     font-size: 32px;
     color: rgb(42, 122, 228);
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para o cabeçalho */
 }
 
 .chamada {
-    background: rgb(184, 156, 213);
+    background: rgba(184, 156, 213, 0.8); /* Mantém a cor, mas com transparência */
     padding-bottom: 80px;
     padding-top: 80px;
     display: flex;
     justify-content: center;
+    color: #333; /* Muda a cor do texto para melhor contraste com o fundo claro */
 }
 
 .chamada-texto {
@@ -27,10 +41,12 @@ header {
 
 h1 {
     font-size: 40px;
+    color: #000; /* Texto mais escuro para melhor contraste */
 }
 
 p {
     font-size: 20px;
+    color: #333; /* Texto mais escuro para melhor contraste */
 }
 
 .categoria-videos {
@@ -43,6 +59,10 @@ p {
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente para as categorias */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 8px; /* Bordas arredondadas para as seções */
 }
 
 .categoria-videos img {
@@ -58,3 +78,6 @@ p {
 .categoria h2 {
     color: rgb(42, 122, 228);
 }
+
+
+    
