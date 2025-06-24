@@ -3,7 +3,7 @@ body {
     /* Fundo com degradê suave e imagem de ballet */
     background:
         linear-gradient(to bottom, #FFE0F7, #FFF), /* Rosa claro suave, branco */
-        url(https://images.tcdn.com.br/img/img_prod/926345/adesivo_de_parede_silhueta_bailarina_414_2_0b0d777987538d17ff1fdfb8694ada08_20210816112845.jpg); /* Substitua pela URL da sua imagem */
+        url(https://images.tcdn.com.br/img/img_prod/926345/adesivo_de_parede_silhueta_bailarina_414_2_0b0d777987538d17ff1fdfb8694ada08_20210816112845.jpg); /* Imagem de ballet de fundo */
     background-size: cover; /* Garante que a imagem cubra todo o fundo */
     background-position: center center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição da imagem */
@@ -26,11 +26,11 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(https://dbdzm869oupei.cloudfront.net/img/sticker/original/png/6099.png); /* **URL da sua imagem de silhueta aqui!** */
-    background-size: cover; /* ou 'contain' se preferir que ela não corte */
-    background-position: center bottom; /* Posiciona a silhueta na parte inferior */
+    background-image: url(https://dbdzm869oupei.cloudfront.net/img/sticker/original/png/6099.png); /* Silhueta das bailarinas */
+    background-size: 50% auto; /* Ajustado para 50% da largura, altura automática. Você pode testar valores como 30% ou 40% */
+    background-position: center 95%; /* Posiciona a silhueta mais perto da parte inferior (95%) */
     background-repeat: no-repeat;
-    opacity: 0.3; /* Ajuste a opacidade para deixar a silhueta mais suave */
+    opacity: 0.2; /* Opacidade reduzida para ficar mais sutil */
     pointer-events: none; /* Garante que o pseudo-elemento não interfira com interações do mouse */
     z-index: -1; /* Coloca a silhueta atrás de todo o conteúdo */
 }
