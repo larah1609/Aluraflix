@@ -1,16 +1,17 @@
 body {
     color: #333; /* Mudado para um cinza escuro para melhor contraste com fundos claros */
-    /* Fundo com degradê suave e imagem de ballet */
+    /* Fundo com degradê suave, imagem de ballet e silhuetas de bailarinas */
     background:
-        linear-gradient(to bottom, #FFE0F7, #FFF); /* Rosa claro suave, branco */
-    background-image: url('URL_DA_IMAGEM_DE_BALLET_AQUI'); /* Substitua pela URL da sua imagem */
-    background-size: cover; /* Garante que a imagem cubra todo o fundo */
-    background-position: center center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
-    background-attachment: fixed; /* Fixa a imagem de fundo ao rolar */
+        linear-gradient(to bottom, #FFE0F7, #FFF), /* Rosa claro suave, branco */
+        url('URL_DA_IMAGEM_DE_SILHUETAS_AQUI'), /* **Adicione esta linha com a URL da sua imagem de silhueta** */
+        url('URL_DA_IMAGEM_DE_BALLET_AQUI'); /* Substitua pela URL da sua imagem de ballet */
+    background-size: cover, cover, cover; /* Garante que as imagens cubram todo o fundo */
+    background-position: center center, center bottom, center center; /* Centraliza a imagem de ballet, posiciona a silhueta na parte inferior */
+    background-repeat: no-repeat, no-repeat, no-repeat; /* Evita repetição das imagens */
+    background-attachment: fixed, fixed, fixed; /* Fixa as imagens de fundo ao rolar */
 
-    /* Adiciona uma sobreposição translúcida para suavizar a imagem e manter a legibilidade */
-    background-blend-mode: overlay;
+    /* Adiciona uma sobreposição translúcida para suavizar as imagens e manter a legibilidade */
+    background-blend-mode: overlay, screen, overlay; /* 'screen' pode ser bom para a silhueta, experimente! */
 
     margin: 0px;
     font-family: "Chakra Petch", sans-serif;
