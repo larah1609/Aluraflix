@@ -3,7 +3,7 @@ body {
     /* Fundo com degradê suave e imagem de ballet */
     background:
         linear-gradient(to bottom, #FFE0F7, #FFF), /* Rosa claro suave, branco */
-        url(https://images.app.goo.gl/6JjJCsYMRoybyo5F6); /* Substitua pela URL da sua imagem */
+        url(https://images.tcdn.com.br/img/img_prod/926345/adesivo_de_parede_silhueta_bailarina_414_2_0b0d777987538d17ff1fdfb8694ada08_20210816112845.jpg); /* Substitua pela URL da sua imagem */
     background-size: cover; /* Garante que a imagem cubra todo o fundo */
     background-position: center center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição da imagem */
