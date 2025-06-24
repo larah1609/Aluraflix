@@ -1,22 +1,40 @@
 body {
     color: #333; /* Mudado para um cinza escuro para melhor contraste com fundos claros */
-    /* Fundo com degradê suave, imagem de ballet e silhuetas de bailarinas */
+    /* Fundo com degradê suave e imagem de ballet */
     background:
         linear-gradient(to bottom, #FFE0F7, #FFF), /* Rosa claro suave, branco */
-        url('URL_DA_IMAGEM_DE_SILHUETAS_AQUI'), /* **Adicione esta linha com a URL da sua imagem de silhueta** */
-        url('URL_DA_IMAGEM_DE_BALLET_AQUI'); /* Substitua pela URL da sua imagem de ballet */
-    background-size: cover, cover, cover; /* Garante que as imagens cubram todo o fundo */
-    background-position: center center, center bottom, center center; /* Centraliza a imagem de ballet, posiciona a silhueta na parte inferior */
-    background-repeat: no-repeat, no-repeat, no-repeat; /* Evita repetição das imagens */
-    background-attachment: fixed, fixed, fixed; /* Fixa as imagens de fundo ao rolar */
+        url(https://images.app.goo.gl/6JjJCsYMRoybyo5F6); /* Substitua pela URL da sua imagem */
+    background-size: cover; /* Garante que a imagem cubra todo o fundo */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-attachment: fixed; /* Fixa a imagem de fundo ao rolar */
 
-    /* Adiciona uma sobreposição translúcida para suavizar as imagens e manter a legibilidade */
-    background-blend-mode: overlay, screen, overlay; /* 'screen' pode ser bom para a silhueta, experimente! */
+    /* Adiciona uma sobreposição translúcida para suavizar a imagem e manter a legibilidade */
+    background-blend-mode: overlay;
 
     margin: 0px;
     font-family: "Chakra Petch", sans-serif;
     margin-bottom: 100px;
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
 }
+
+/* Pseudo-elemento para a silhueta das bailarinas */
+body::before {
+    content: ''; /* Essencial para pseudo-elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('URL_DA_IMAGEM_DE_SILHUETAS_AQUI'); /* **URL da sua imagem de silhueta aqui!** */
+    background-size: cover; /* ou 'contain' se preferir que ela não corte */
+    background-position: center bottom; /* Posiciona a silhueta na parte inferior */
+    background-repeat: no-repeat;
+    opacity: 0.3; /* Ajuste a opacidade para deixar a silhueta mais suave */
+    pointer-events: none; /* Garante que o pseudo-elemento não interfira com interações do mouse */
+    z-index: -1; /* Coloca a silhueta atrás de todo o conteúdo */
+}
+
 
 header {
     border-bottom: solid 2px #FF69B4; /* Trocado para um rosa mais vibrante para combinar */
