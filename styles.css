@@ -1,17 +1,17 @@
 body {
     color: white;
     /* Fundo com degradê suave e imagem de ballet */
-    background: 
-        linear-gradient(to bottom, #E0F2F7, #F0E6F7, #FFF); /* Azul claro, lilás suave, branco */
+    background:
+        linear-gradient(to bottom, #FFE0F7, #FFF); /* Rosa claro suave, branco */
     background-image: url('URL_DA_IMAGEM_DE_BALLET_AQUI'); /* Substitua pela URL da sua imagem */
     background-size: cover; /* Garante que a imagem cubra todo o fundo */
     background-position: center center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição da imagem */
     background-attachment: fixed; /* Fixa a imagem de fundo ao rolar */
-    
+
     /* Adiciona uma sobreposição translúcida para suavizar a imagem e manter a legibilidade */
-    background-blend-mode: overlay; 
-    
+    background-blend-mode: overlay;
+
     margin: 0px;
     font-family: "Chakra Petch", sans-serif;
     margin-bottom: 100px;
