@@ -15,24 +15,42 @@ body {
     margin: 0px;
     font-family: "Chakra Petch", sans-serif;
     margin-bottom: 100px;
-    position: relative; /* Necessário para posicionar o pseudo-elemento */
+    position: relative; /* Necessário para posicionar os pseudo-elementos */
+    overflow-x: hidden; /* Evita rolagem horizontal se as silhuetas ultrapassarem */
 }
 
-/* Pseudo-elemento para a silhueta das bailarinas */
+/* Primeira silhueta (lado esquerdo) */
 body::before {
     content: ''; /* Essencial para pseudo-elementos */
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(https://dbdzm869oupei.cloudfront.net/img/sticker/original/png/6099.png); /* Silhueta das bailarinas */
-    background-size: 50% auto; /* Ajustado para 50% da largura, altura automática. Você pode testar valores como 30% ou 40% */
-    background-position: center 95%; /* Posiciona a silhueta mais perto da parte inferior (95%) */
+    bottom: 0; /* Ancorar na parte inferior */
+    left: 2%; /* Mais à esquerda */
+    width: 20%; /* Tamanho menor (ajuste conforme necessário) */
+    height: 30%; /* Altura proporcional (ajuste conforme necessário) */
+    background-image: url('URL_DA_PRIMEIRA_SILHUETA_AQUI'); /* **URL da primeira imagem de silhueta!** */
+    background-size: contain; /* Garante que a imagem caiba completamente */
+    background-position: bottom left; /* Posiciona na parte inferior esquerda do seu espaço */
     background-repeat: no-repeat;
-    opacity: 0.2; /* Opacidade reduzida para ficar mais sutil */
-    pointer-events: none; /* Garante que o pseudo-elemento não interfira com interações do mouse */
-    z-index: -1; /* Coloca a silhueta atrás de todo o conteúdo */
+    opacity: 0.2; /* Opacidade suave */
+    pointer-events: none; /* Garante que não interfira com o mouse */
+    z-index: -1; /* Coloca atrás do conteúdo */
+}
+
+/* Segunda silhueta (lado direito) */
+body::after {
+    content: ''; /* Essencial para pseudo-elementos */
+    position: absolute;
+    bottom: 0; /* Ancorar na parte inferior */
+    right: 2%; /* Mais à direita */
+    width: 20%; /* Tamanho menor (ajuste conforme necessário) */
+    height: 30%; /* Altura proporcional (ajuste conforme necessário) */
+    background-image: url('URL_DA_SEGUNDA_SILHUETA_AQUI'); /* **URL da segunda imagem de silhueta!** */
+    background-size: contain; /* Garante que a imagem caiba completamente */
+    background-position: bottom right; /* Posiciona na parte inferior direita do seu espaço */
+    background-repeat: no-repeat;
+    opacity: 0.2; /* Opacidade suave */
+    pointer-events: none; /* Garante que não interfira com o mouse */
+    z-index: -1; /* Coloca atrás do conteúdo */
 }
 
 
